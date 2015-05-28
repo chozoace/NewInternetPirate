@@ -19,7 +19,7 @@ public class MainMenuScript : MonoBehaviour
     {
         if (GUI.Button(new Rect(40, 450, 150, 60), _playButtonTex, GUIStyle.none))
         {
-            Application.LoadLevel("PrototypeScene");
+            Application.LoadLevel("LevelSelect");
         }
         if (GUI.Button(new Rect(300, 450, 150, 60), _quitButtonTex, GUIStyle.none))
         {

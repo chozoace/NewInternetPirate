@@ -49,6 +49,9 @@
      <Compile Include="Assets\ButtonScript.cs" />
      <Compile Include="Assets\DownloadButtonScript.cs" />
      <Compile Include="Assets\LevelButtonScript.cs" />
+     <Compile Include="Assets\PauseMenuScript.cs" />
+     <Compile Include="Assets\QuitPauseButtonScript.cs" />
+     <Compile Include="Assets\ResumeButtonScript.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyScript.cs" />
      <Compile Include="Assets\Scripts\Enemy\GunScripts\EnemyGun.cs" />
      <Compile Include="Assets\Scripts\Enemy\GunScripts\FanShotGun.cs" />

@@ -72,7 +72,6 @@ public class EnemyScript : MonoBehaviour
         this.gameObject.layer = 14;
         if (deathViaBullet && GameController.Instance().CurrentGameState.StateName == "Gameplay")
         {
-            Debug.Log("via bullet");
             GameController.Instance().KillScore = GameController.Instance().KillScore + 1;
         }
     }

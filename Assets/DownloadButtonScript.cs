@@ -19,7 +19,7 @@ public class DownloadButtonScript : ButtonScript
 
     protected override void OnGUI()
     {
-        if (GUI.Button(new Rect(_xPos, _yPos, 440, 32), _buttonTexture, GUIStyle.none))
+        if (GUI.Button(new Rect(_xPos, _yPos, 80, 32), _buttonTexture, GUIStyle.none))
         {
             if (_levelSelected)
                 ToggleButton();
@@ -45,6 +45,7 @@ public class DownloadButtonScript : ButtonScript
     {
         //Load Levels here
         Debug.Log("Download Toggled: " + _levelName);
+        Application.LoadLevel(_levelName);
     }
 
 	void Update () 
