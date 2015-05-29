@@ -46,12 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\ButtonScript.cs" />
-     <Compile Include="Assets\DownloadButtonScript.cs" />
-     <Compile Include="Assets\LevelButtonScript.cs" />
-     <Compile Include="Assets\PauseMenuScript.cs" />
-     <Compile Include="Assets\QuitPauseButtonScript.cs" />
-     <Compile Include="Assets\ResumeButtonScript.cs" />
+     <Compile Include="Assets\LevelSelectButtonScript.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyScript.cs" />
      <Compile Include="Assets\Scripts\Enemy\GunScripts\EnemyGun.cs" />
      <Compile Include="Assets\Scripts\Enemy\GunScripts\FanShotGun.cs" />
@@ -76,10 +71,17 @@
      <Compile Include="Assets\Scripts\GameStates\LevelEndState.cs" />
      <Compile Include="Assets\Scripts\GameStates\PauseState.cs" />
      <Compile Include="Assets\Scripts\GameStates\PlayerDeathState.cs" />
-     <Compile Include="Assets\Scripts\LevelSelectScript.cs" />
+     <Compile Include="Assets\Scripts\MenuScripts\ButtonScript.cs" />
+     <Compile Include="Assets\Scripts\MenuScripts\DownloadButtonScript.cs" />
      <Compile Include="Assets\Scripts\MenuScripts\GameOverScript.cs" />
+     <Compile Include="Assets\Scripts\MenuScripts\LevelButtonScript.cs" />
      <Compile Include="Assets\Scripts\MenuScripts\LevelEndMenuScript.cs" />
+     <Compile Include="Assets\Scripts\MenuScripts\LevelSelectScript.cs" />
      <Compile Include="Assets\Scripts\MenuScripts\MainMenuScript.cs" />
+     <Compile Include="Assets\Scripts\MenuScripts\PauseMenuScript.cs" />
+     <Compile Include="Assets\Scripts\MenuScripts\QuitPauseButtonScript.cs" />
+     <Compile Include="Assets\Scripts\MenuScripts\ResumeButtonScript.cs" />
+     <Compile Include="Assets\Scripts\MenuScripts\RetryButtonScipt.cs" />
      <Compile Include="Assets\Scripts\ObjectScripts\Background.cs" />
      <Compile Include="Assets\Scripts\ObjectScripts\Bullet.cs" />
      <Compile Include="Assets\Scripts\ObjectScripts\DataBarScript.cs" />

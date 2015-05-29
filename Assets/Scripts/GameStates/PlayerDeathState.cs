@@ -30,6 +30,6 @@ public class PlayerDeathState : GameState
     {
         //Listen to input, if continue, restart level, else back to main
         //Update gameOverPrefab
-        _gameOverPrefab.GetComponent<GameOverScript>().UpdateMenu();
+        //_gameOverPrefab.GetComponent<GameOverScript>().UpdateMenu();
     }
 }

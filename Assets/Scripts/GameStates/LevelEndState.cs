@@ -9,9 +9,9 @@ public class LevelEndState : GameState
     public override void Enter()
     {
         if(!_levelEndMenu)
-            _levelEndMenu = (GameObject)(Instantiate(Resources.Load("LevelEndMenu"), new Vector3(0, -15, 0), Quaternion.identity));
+            _levelEndMenu = (GameObject)(Instantiate(Resources.Load("DownloadComplete"), new Vector3(0, -15, 0), Quaternion.identity));
         if(!_levelFailMenu)
-            _levelFailMenu = (GameObject)(Instantiate(Resources.Load("LevelEndFail"), new Vector3(0, -15, 0), Quaternion.identity));
+            _levelFailMenu = (GameObject)(Instantiate(Resources.Load("DownloadIncomplete"), new Vector3(0, -15, 0), Quaternion.identity));
         if (_stateName == "Default")
             _stateName = "LevelEnd";
 
@@ -31,13 +31,5 @@ public class LevelEndState : GameState
     {
         _levelEndMenu.transform.position = new Vector2(0, -15);
         _levelFailMenu.transform.position = new Vector2(0, -15);
-    }
-
-    public override void UpdateState()
-    {
-        if(PlayerScript.Instance().Score < 50)
-            _levelFailMenu.GetComponent<LevelEndMenuScript>().UpdateMenu();
-        else
-            _levelEndMenu.GetComponent<LevelEndMenuScript>().UpdateMenu();
     }
 }

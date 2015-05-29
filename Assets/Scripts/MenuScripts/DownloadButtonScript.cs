@@ -3,22 +3,28 @@ using System.Collections;
 
 public class DownloadButtonScript : ButtonScript 
 {
+    float _nativeWidth = 480;
+    float _nativeHeight = 640;
     [SerializeField] float _xPos;
     [SerializeField] float _yPos;
     string _levelName;
 
     bool _levelSelected = false;
     public bool LevelSelected { get { return _levelSelected; } }
-    string _unselectedImage = "Assets/Resources/TempSprites/DownloadButton1.png";
-    string _selectedImage = "Assets/Resources/TempSprites/DownloadButton2.png";
+    string _unselectedImage = "TempSprites/DownloadButton1";
+    string _selectedImage = "TempSprites/DownloadButton2";
 
 	void Start ()
     {
-        _buttonTexture = (Texture)(Resources.LoadAssetAtPath(_unselectedImage, typeof(Texture)));
+        _buttonTexture = (Texture)(Resources.Load(_unselectedImage));
 	}
 
     protected override void OnGUI()
     {
+        float rx = Screen.width / _nativeWidth;
+        float ry = Screen.height / _nativeHeight;
+        GUI.matrix = Matrix4x4.TRS(new Vector3(0, 0, 0), Quaternion.identity, new Vector3(rx, ry, 1));
+
         if (GUI.Button(new Rect(_xPos, _yPos, 80, 32), _buttonTexture, GUIStyle.none))
         {
             if (_levelSelected)
@@ -31,13 +37,13 @@ public class DownloadButtonScript : ButtonScript
         if(levelButton.Selected)
         {
             _levelSelected = true;
-            _buttonTexture = (Texture)(Resources.LoadAssetAtPath(_selectedImage, typeof(Texture)));
+            _buttonTexture = (Texture)(Resources.Load(_selectedImage));
             _levelName = levelButton.LevelName;
         }
         else if(!levelButton.Selected)
         {
             _levelSelected = false;
-            _buttonTexture = (Texture)(Resources.LoadAssetAtPath(_unselectedImage, typeof(Texture)));
+            _buttonTexture = (Texture)(Resources.Load(_unselectedImage));
         }
     }
 

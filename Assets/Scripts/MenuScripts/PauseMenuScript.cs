@@ -5,13 +5,11 @@ public class PauseMenuScript : MonoBehaviour
 {
     GameObject _resumeButton = null;
     GameObject _quitButton = null;
-    Vector3 _cameraPosition;
     Vector2 _resumeButtonPosition = new Vector2(.7f, 3.6f);
-    Vector2 _quitButtonPosition = new Vector2(3f, 3.6f);
+    Vector2 _quitButtonPosition = new Vector2(3.3f, 3.6f);
 
 	void Start () 
     {
-        _cameraPosition = CameraScript.Instance().CameraPosition;
 	    if(!_resumeButton)
         {
             _resumeButton = (GameObject)(Instantiate(Resources.Load("ResumeButton"), new Vector3(0, -15, 0), Quaternion.identity));

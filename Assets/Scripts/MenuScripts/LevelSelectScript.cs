@@ -3,7 +3,6 @@ using System.Collections;
 
 public class LevelSelectScript : MonoBehaviour 
 {
-
 	void Start () 
     {
 	    
