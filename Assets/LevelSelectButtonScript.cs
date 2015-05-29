@@ -13,6 +13,7 @@ public class LevelSelectButtonScript : ButtonScript
 	void Start () 
     {
         _buttonTexture = (Texture)(Resources.Load("TempSprites/TorrentListButton"));
+        //_beenPressed = true;
 	}
 
     public void SetupButton()
