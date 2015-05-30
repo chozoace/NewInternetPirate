@@ -50,7 +50,7 @@ public class Turret : MonoBehaviour
                     //reuse that bullet here
                     createBullet = false;
                     bulletScript.PlayerBullet = true;
-                    //Get angle between points
+                    /*//Get angle between points
                     Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                     float deltaY = mousePosition.y - bulletPosition.y;
                     float deltaX = mousePosition.x - bulletPosition.x;
@@ -58,7 +58,9 @@ public class Turret : MonoBehaviour
                     //change x and y speeds based on angle
                     Vector2 bulletSpeedVector;
                     bulletSpeedVector.x = Mathf.Cos(angle) * _bulletSpeed;
-                    bulletSpeedVector.y = Mathf.Sin(angle) * (_bulletSpeed + CameraScript.Instance().CameraMoveSpeed);
+                    bulletSpeedVector.y = Mathf.Sin(angle) * (_bulletSpeed + CameraScript.Instance().CameraMoveSpeed);*/
+
+                    Vector2 bulletSpeedVector = new Vector2(0, _bulletSpeed);
 
                     bulletScript.ReuseBullet(bulletPosition, _damage, bulletSpeedVector);
                     break;
@@ -73,7 +75,7 @@ public class Turret : MonoBehaviour
             bulletScript = bulletPrefab.GetComponent<Bullet>();
             bulletScript.PlayerBullet = true;
             bulletScript.GetComponent<SpriteRenderer>().sprite = Resources.Load("TempBullet", typeof(Sprite)) as Sprite;
-            //Get angle between points
+            /*//Get angle between points
             Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             float deltaY = mousePosition.y - bulletPosition.y;
             float deltaX = mousePosition.x - bulletPosition.x;
@@ -81,7 +83,10 @@ public class Turret : MonoBehaviour
             //change x and y speeds based on angle
             Vector2 bulletSpeedVector;
             bulletSpeedVector.x = Mathf.Cos(angle) * _bulletSpeed;
-            bulletSpeedVector.y = Mathf.Sin(angle) * (_bulletSpeed + CameraScript.Instance().CameraMoveSpeed);
+            bulletSpeedVector.y = Mathf.Sin(angle) * (_bulletSpeed + CameraScript.Instance().CameraMoveSpeed);*/
+
+            Vector2 bulletSpeedVector = new Vector2(0, _bulletSpeed);
+
             bulletScript.InitializeStats(_damage, bulletSpeedVector);
             _bulletList.Add(bulletPrefab);
         }

@@ -97,7 +97,9 @@ public class PlayerScript : MonoBehaviour
             Vector2 v = transform.position;
             v.x += .25f;
             
-            _myTurret.Shoot(v);
+            //_myTurret.Shoot(v);
+            if (_myTurret.CanShoot)
+                _shooting = true;
         }
         if(Input.GetMouseButtonDown(0))
         {
@@ -127,7 +129,7 @@ public class PlayerScript : MonoBehaviour
         }
         if (Input.GetKeyUp(_turretShootKey))
         {
-
+            _shooting = false;
         }
         if (Input.GetMouseButtonUp(0))
         {
